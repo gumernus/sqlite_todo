@@ -4,6 +4,7 @@ LDFLAGS := -lsqlite3
 SRC_DIR := ./src
 OBJ_DIR := ./obj
 BIN_DIR := ./bin
+INCLUDE_DIR := ./include
 
 EXECUTABLE := $(BIN_DIR)/sqlite_todo
 SRC_FILES := $(wildcard $(SRC_DIR)/*.cpp)
@@ -15,7 +16,7 @@ $(EXECUTABLE): $(OBJ_FILES)
 
 $(OBJ_DIR)/%.o: $(SRC_DIR)/%.cpp
 	@mkdir -p $(OBJ_DIR)
-	$(CC) $(CFLAGS) -c $< -o $@
+	$(CC) $(CFLAGS) -c $< -I$(INCLUDE_DIR) -o $@
 
 clean:
 	rm -rf $(OBJ_DIR) $(BIN_DIR)
