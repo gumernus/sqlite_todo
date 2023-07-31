@@ -5,9 +5,9 @@
 static int callback(void *NotUsed, int argc, char **argv, char **azColName) {
 
 	for (int i = 0; i < argc; i++) {
-        std::cout << azColName[i] << ": " << (argv[i] ? argv[i] : "NULL") << '\n';
-    }
-    std::cout << "-------------------\n";
+        	std::cout << azColName[i] << ": " << (argv[i] ? argv[i] : "NULL") << '\n';
+    	}
+    	std::cout << "-------------------\n";
 
 	return 0;
 
