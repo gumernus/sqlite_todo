@@ -32,12 +32,9 @@ void execute_db_statement(const char *statement, int rc, sqlite3 *db) {
 int main () {
 	
 	sqlite3 *db;
-	char *zErrMsg = 0;
-	int rc;
-	const char *sql;
 
 	/* Open database */
-	rc = sqlite3_open("todo.db", &db);
+	int rc = sqlite3_open("todo.db", &db);
 
 	/* Check if the table exists. If not create it */
 	execute_db_statement("CREATE TABLE IF NOT EXISTS todo (id INTEGER PRIMARY KEY, task TEXT, completed INTEGER);", rc, db);
