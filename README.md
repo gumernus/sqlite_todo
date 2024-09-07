@@ -1,6 +1,12 @@
-Compile with `make` and run with `./bin/sqlite_todo`
+# Install
 
-You will need to have the sqlite3 library installed. This is how you install the library in debian distros:
+## On debian based systems
 ```
 sudo apt-get install libsqlite3-dev
 ```
+
+
+# Compile and run
+
+Compile with `make` and run with `./bin/sqlite_todo`
+
